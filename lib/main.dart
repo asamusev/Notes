@@ -121,11 +121,14 @@ class _NotePageState extends State<NotePage> {
            Navigator.pop(context, NoteList() );
           }
         ),
+        
         FlatButton(child: Icon(Icons.delete), onPressed: () {
+          setState(() {
           int id = widget.note.id;
           if (id == id) {
           allNotes.removeAt(id);
           }
+          });
           Navigator.pop(context, NoteList() );
         },)
         ]
